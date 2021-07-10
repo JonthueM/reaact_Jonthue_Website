@@ -1,23 +1,34 @@
 import React from 'react';
 import styled from 'styled-components';
-import Layout from '../../../Layouts/page/pageLayout';
 import ResumeIcon from '../../sharedAssets/SVG/ResumeIcon.svg';
 
 const SVG = styled.img`
-        position: relative;
-        z-index: 900;
-        height: 10000px; transform:translate(43.5%,44.6%); 
+    position: absolute;
+    top: 230px;
+    left:39%;
+    height: 460px;
+    width: 422px;
+       
+`;
+const Title = styled.p`
+    font-size: 122px;
+    margin-top: 0%;
+    text-decoration: none;
+    text-align: center;
+    color:white;
+    position: absolute;
+    top:550px;
+    right: 44%;
 `;
 
 class rHome extends React.Component {
     render() {
         return(
             <div>
-            <Layout>
-                <a href='/'>
+            
                     <SVG src={ResumeIcon}/>
-                </a>
-            </Layout>
+                    <Title>Resume</Title>
+            
         </div>
         );
         

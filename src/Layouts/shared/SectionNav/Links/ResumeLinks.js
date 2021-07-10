@@ -1,18 +1,26 @@
 import React from 'react';
 import {ListItems }from './ListItems';
-import {NavLink} from '../../styledElements/navLink';
+import styled from "styled-components";
+import {NavLink} from 'react-router-dom';
 import { resumeHome, resumeAbout, resumeContact, resumeGitHub, resumeApplocker, resumeProjects, resumeResumes} from '../../../../routes';
 
+const StyledLinks = styled(NavLink)`
+ text-decoration: none;
+ color: white;
+ &:focus, &:hover, &:visited, &:link, &:active {
+        text-decoration: none;
+    }
+`;
 function ResumeLinks(){
     return(
     <React.Fragment>
-        <ListItems><NavLink to={resumeHome}>Home</NavLink></ListItems>
-        <ListItems><NavLink to={resumeAbout}>About</NavLink></ListItems>
-        <ListItems><NavLink to={resumeResumes}>Resume</NavLink></ListItems>
-        <ListItems><NavLink to={resumeProjects}>Projects</NavLink></ListItems>
-        <ListItems><NavLink To={resumeApplocker}>AppLocker</NavLink></ListItems>
-        <ListItems><NavLink To={resumeGitHub}>Github</NavLink></ListItems>
-        <ListItems><NavLink To={resumeContact}>Contact</NavLink></ListItems>
+        <ListItems><StyledLinks to={resumeHome}>Home</StyledLinks></ListItems>
+        <ListItems><StyledLinks to={resumeAbout}>About</StyledLinks></ListItems>
+        <ListItems><StyledLinks to={resumeResumes}>Resume</StyledLinks></ListItems>
+        <ListItems><StyledLinks to={resumeProjects}>Projects</StyledLinks></ListItems>
+        <ListItems><StyledLinks To={resumeApplocker}>AppLocker</StyledLinks></ListItems>
+        <ListItems><StyledLinks To={resumeGitHub}>Github</StyledLinks></ListItems>
+        <ListItems><StyledLinks To={resumeContact}>Contact</StyledLinks></ListItems>
     </React.Fragment>
     );
 };

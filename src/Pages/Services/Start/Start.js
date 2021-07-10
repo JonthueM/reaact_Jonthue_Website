@@ -22,8 +22,8 @@ const Note = styled.p`
     margin: 7px 0;   
 `;
 
-class Start extends React.Component {
-    render(){
+function Start (){
+    
         return(
             <div>
             <p>Before we start be sure you got some basic things in place <br/>
@@ -42,7 +42,7 @@ class Start extends React.Component {
         </div>
         );
         
-    }
+    
 }
 
 export default Start;

@@ -27,8 +27,8 @@ function App() {
     <BrowserRouter>
       <Layout>
         <Switch>
-          <Route path={rootPath} component={Home} />   
-          <Route exact path={resumeAbout} component={resumAbout}/>
+          <Route exact path={rootPath} component={Home} />   
+          <Route path={resumeAbout} component={resumAbout}/>
           <Route path={resumeResumes} component={rResume}/>
           <Route path={resumeProjects} component={rProjects}/>
           <Route path={resumeApplocker} component={rAppLocker}/>

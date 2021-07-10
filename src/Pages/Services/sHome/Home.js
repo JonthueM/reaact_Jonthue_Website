@@ -1,55 +1,44 @@
 import React from 'react';
-import Layout from '../../../Layouts/page/pageLayout';
 import styled from "styled-components";
 import ServiceIcon from '../../sharedAssets/SVG/ServicesIcon.svg';
-import ResumeIcon from '../../sharedAssets/SVG/ResumeIcon.svg';
 
-const SVGresume = styled.img`
-        position: absolute;
-        z-index: 900;
-        height: 300px; 
-        transform:translate(90%,-18%); 
-`;
-const Linkresume = styled.a`
-    position: absolute;
-    bottom: 150px;
-    font-size: 80px;
-    right: 490px;
-`;
 const SVGservices = styled.img`
     position: absolute;
+    top: 230px;
+    right: 45%;
     z-index: 900;
-    height:500px;
-    transform:translate(-130%,-33);
+    height: 360px;
+    width: 322px;
+   
 
 `;
-
-const Linksevice = styled.a`
+const Title = styled.p`
+    font-size: 122px;
+    margin-top: 0%;
+    text-decoration: none;
+    text-align: center;
+    color:white;
     position: absolute;
-    left: 395px;
-    bottom: 150px;
-    font-size: 80px;
+    top:500px;
+    right: 44%;
 `;
 
-class sHome extends React.Component{
-    render() {
+
+function sHome (){
+    
         return(
-            <div>
-            <Layout>
-                <a href='/resume/home'>
-                    <SVGresume src={ResumeIcon} />
-                </a>
-                <Linkresume href="/resume/home">Resume</Linkresume>
-
-                <a href='/services/home'>
+            <React.Fragment>
+            
+                
                     <SVGservices src={ServiceIcon}/>
-                </a>
-                <Linksevice href="/services/home">Service</Linksevice>
+                    <Title>Service</Title>
 
-            </Layout>
-        </div>
+                
+
+            
+        </React.Fragment>
         );
         
-    }   
+     
 }
  export default sHome;

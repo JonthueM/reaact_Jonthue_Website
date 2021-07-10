@@ -1,9 +1,17 @@
 import React from 'react';
 import styled from "styled-components";
-import {NavLink} from '../Layouts/shared/styledElements/navLink';
+import { Link } from 'react-router-dom';
 import { resumeHome, serviceHome, } from './../routes';
 import ResumeLogo from './sharedAssets/SVG/ResumeIcon.svg';
 import ServiceLogo from './sharedAssets/SVG/ServicesIcon.svg';
+
+const StyledLinks = styled(Link)`
+ text-decoration: none;
+ color: white;
+ &:focus, &:hover, &:visited, &:link, &:active {
+        text-decoration: none;
+    }
+`;
 
 const OneRow = styled.div`
     display:flex;
@@ -16,7 +24,7 @@ const ImgLeft = styled.img `
 const LeftSide = styled.div`
     position: absolute;
     left: 500px;
-    top: 230px;
+    top: 141px;
 `;
 const ImgRight = styled.img `
     height: 360px;
@@ -25,11 +33,12 @@ const ImgRight = styled.img `
 const RightSide = styled.div`
     position: absolute;
     right: 500px;
-    top: 360px;
+    top: 305px;
 `;
 const Title = styled.p`
     font-size: 122px;
     margin-top: 0%;
+    text-decoration: none;
 `;
 
 const LeftTitle = styled(Title)`
@@ -47,16 +56,16 @@ function Home(){
         <React.Fragment>
             <OneRow>
                 <LeftSide>
-                    <NavLink to={resumeHome}>
+                    <StyledLinks to={resumeHome}>
                         <ImgLeft src={ResumeLogo}/>
                         <LeftTitle>Resume</LeftTitle>
-                    </NavLink>
+                    </StyledLinks>
                 </LeftSide>
                 <RightSide>
-                    <NavLink to={serviceHome}>
+                    <StyledLinks to={serviceHome}>
                         <ImgRight src={ServiceLogo} />
                         <RightTitle>Service</RightTitle>
-                    </NavLink>
+                    </StyledLinks>
                 </RightSide>
             </OneRow>
         </React.Fragment>

@@ -1,12 +1,12 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
-const NavLinks = styled(Link)`
+const TempNavLinks = styled(NavLink)`
     text-decoration: none;
     color:white;
 `;
 
-export const NavLink = ({children}) =>{
-    return <NavLinks>{children}</NavLinks>
+export const NavLinks = ({children}) =>{
+    return <TempNavLinks>{children}</TempNavLinks>
 };

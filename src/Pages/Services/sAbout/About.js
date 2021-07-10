@@ -4,9 +4,11 @@ import styled from "styled-components";
 import webIcon from "../../sharedAssets/aboutMeIcons/web.png";
 import mobileIcon from "../../sharedAssets/aboutMeIcons/mobile.png";
 import emailIcon from "../../sharedAssets/aboutMeIcons/email.png";
+import Image from './images/background.png';
+import {Link} from 'react-router-dom';
+
 
 const Ptag = styled.p`
-    font-size:14px;
     width:100%;
 `;
 
@@ -25,21 +27,22 @@ const ImgBullet = styled.img`
     width: 40px;
     height:auto;
 `;
-const TextBullet = styled.p`
+const TextBullet = styled(Link)`
+    text-decoration: none;
+    color: white;
     vertical-align: middle;
     display: inline;
     margin-left:20px;
 `;
-class sAbout extends React.Component {
-    render(){
+function sAbout() {
+    
         return (
             <div>
-                <Layout>
+                <Layout Image={Image}>
                 
                 <Ptag>Who am I? Hardworking, INFP-T, genuine,
-creative,
-Scorpio,  <br/>gamer, spiritual christian
- and true to my core values.</Ptag>
+                    creative, Scorpio, gamer, spiritual christian
+                    and true to my core values.</Ptag>
                     
                     <ListGroup>
                         <Inline href="/">
@@ -61,6 +64,6 @@ Scorpio,  <br/>gamer, spiritual christian
         
             </div>
             )
-    }
+    
 }
 export default sAbout;

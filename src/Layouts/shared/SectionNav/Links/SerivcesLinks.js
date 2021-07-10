@@ -1,19 +1,27 @@
 import React from 'react';
-import {NavLink} from '../../styledElements/navLink';
+import styled from "styled-components";
 import {ListItems} from './ListItems';
+import {NavLink} from 'react-router-dom';
+
 import { serviceHome, serviceAbout, serviceServices, serviceApplocker,serviceContact, serviceStart, servicePortfolio} from '../../../../routes';
 
-
+const StyledLinks = styled(NavLink)`
+ text-decoration: none;
+ color: white;
+ &:focus, &:hover, &:visited, &:link, &:active {
+        text-decoration: none;
+    }
+`;
 function ServicesLinks(){
     return(
     <React.Fragment>
-        <ListItems><NavLink to={serviceHome}>Home</NavLink></ListItems>
-        <ListItems><NavLink to={serviceAbout}>About</NavLink></ListItems>
-        <ListItems><NavLink to={serviceServices}>Services</NavLink></ListItems>
-        <ListItems><NavLink to={servicePortfolio}>Portfolio</NavLink></ListItems>
-        <ListItems><NavLink to={serviceApplocker}>AppLocker</NavLink></ListItems>
-        <ListItems><NavLink to={serviceStart}>Start</NavLink></ListItems>
-        <ListItems><NavLink to={serviceContact}>Contact</NavLink></ListItems>
+        <ListItems><StyledLinks to={serviceHome}>Home</StyledLinks></ListItems>
+        <ListItems><StyledLinks to={serviceAbout}>About</StyledLinks></ListItems>
+        <ListItems><StyledLinks to={serviceServices}>Services</StyledLinks></ListItems>
+        <ListItems><StyledLinks to={servicePortfolio}>Portfolio</StyledLinks></ListItems>
+        <ListItems><StyledLinks to={serviceApplocker}>AppLocker</StyledLinks></ListItems>
+        <ListItems><StyledLinks to={serviceStart}>Start</StyledLinks></ListItems>
+        <ListItems><StyledLinks to={serviceContact}>Contact</StyledLinks></ListItems>
     </React.Fragment>
     );
 };

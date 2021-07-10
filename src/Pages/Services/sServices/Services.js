@@ -47,8 +47,8 @@ const Img = styled.img`
     margin:0;
 `;
 
-class Service extends React.Component{
-    render(){
+function Service(){
+    
         return(
             <div>
         <Layout>
@@ -84,6 +84,6 @@ class Service extends React.Component{
         </div>
         );
         
-    }
+    
 }
 export default Service;
