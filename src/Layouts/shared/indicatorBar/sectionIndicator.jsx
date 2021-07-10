@@ -76,6 +76,6 @@ const Contents = () =>{
 
 const SectionIndicator = () =>{
 
-    return <div><Contents/></div>
+    return <React.Fragment><Contents/></React.Fragment>
 };
 export default SectionIndicator;

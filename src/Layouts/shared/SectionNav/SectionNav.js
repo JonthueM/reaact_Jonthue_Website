@@ -56,7 +56,7 @@ const Contents = () =>{
     console.log(Location);
     
 
-    if (Location.indexOf(Service) !== -1 && Location.indexOf(Resume) !== -1 ){
+    if (Location.indexOf(Service) !== -1 && useLocation.indexOf(Resume) !== -1 ){
         return <React.Fragment><Section><QuoteDisplay>Expectional People Learn that doing their best is all they can do. - Wes Fesler</QuoteDisplay>    </Section></React.Fragment>
     }
     else {
