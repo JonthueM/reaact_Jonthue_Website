@@ -1,9 +1,12 @@
 import React from 'react';
 import {InputType} from '../../../Layouts/shared/styledElements/input';
 import Layout from '../../../Layouts/page/pageLayout';
+import {ImageContainer} from "../../../Layouts/page/ImageColumn";
+import ContentColumn from '../../../Layouts/page/ContentColumn';
 import {TextArea} from '../../../Layouts/shared/styledElements/textArea';
 import {primaryButton} from '../../../Layouts/shared/styledElements/primaryButton';
 import styled from 'styled-components';
+import Image from './images/background.png';
 
 const Name = styled(InputType).attrs(props =>({
     type: "text",
@@ -18,18 +21,34 @@ const Email = styled(InputType).attrs({
 const LeftSideButton = styled(primaryButton)`
     margin-left: 12%;
 `;
-class sContact extends React.Component{
-    render(){
-        return(
-            <div>
-            <Layout>
+
+const ContactContent = ()=>{
+return(
+    <React.Fragment>
                 <Name />
                 <Email />
                 <TextArea />
                 <LeftSideButton src="/"/>
-            </Layout>
-        </div>
+    </React.Fragment>
+)
+};
+
+function sContact (){
+    
+        return(
+            <React.Fragment>
+                <Layout 
+                    RightColumn={
+                        <ContentColumn>
+                            <ContactContent/>
+                        </ContentColumn>
+                    }
+                    LeftColumn={
+                        <ImageContainer Image={Image}/>
+                    }
+                />
+        </React.Fragment>
         );
-    }
+    
 }
 export default sContact;

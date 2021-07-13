@@ -1,6 +1,9 @@
 import React from 'react';
 import Layout from '../../../Layouts/page/pageLayout';
 import styled from "styled-components";
+import BackgroundImage from './images/background.png';
+import ContentColumn from '../../../Layouts/page/ContentColumn';
+import { ImageContainer } from '../../../Layouts/page/ImageColumn';
 
 const Center = styled.div`
     display: flex;
@@ -79,30 +82,43 @@ const TopSection = styled.div`
 	background-size:cover;
 `;
 
+const ResumeContent = () =>{
+	return(
+		<React.Fragment>
+			<Center>
+					<ResumeContainer>
+						<BottomSection>
+							<TopRSection>
+								<Bottom2></Bottom2>
+								<CTAResume>
+									<Icon></Icon>
+								</CTAResume>
+							</TopRSection>
+						</BottomSection><TopSection></TopSection>
+					</ResumeContainer>
+				
+			</Center>
+		</React.Fragment>
+	)
+}
 
-class rResume extends React.Component{
-    render(){
+function rResume(){
+    
 		return(
-			<div>
-        <Layout>
-            <Center>
-                
-                    <ResumeContainer>
-                        <BottomSection>
-                            <TopRSection>
-                                <Bottom2></Bottom2>
-                                <CTAResume>
-                                    <Icon></Icon>
-                                </CTAResume>
-                            </TopRSection>
-                        </BottomSection><TopSection></TopSection>
-                    </ResumeContainer>
-                
-            </Center>
-        </Layout>
-        </div>
+			<React.Fragment>
+					<Layout 
+					RightColumn={
+						<ContentColumn>
+							<ResumeContent/>
+						</ContentColumn>
+					}
+					LeftColumn={
+						<ImageContainer Image={BackgroundImage} />
+					}
+					 />
+        	</React.Fragment>
 		);
         
-    }
+    
 }
 export default rResume;

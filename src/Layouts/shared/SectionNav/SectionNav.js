@@ -1,10 +1,14 @@
 import React from 'react';
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import { Link,useLocation } from 'react-router-dom';
 import ResumeLinks from './Links/ResumeLinks';
 import ServiceLinks from './Links/SerivcesLinks';
 import Logo from './../../../Pages/sharedAssets/loadingAssets/logo.svg';
 
+const SlideUp = keyframes`
+from{bottom:-100px} 
+  to{bottom:0;}
+`;
 
 const Section = styled.div`
     background-color: transparent; 
@@ -14,6 +18,8 @@ const Section = styled.div`
     padding-bottom: 35px; 
     width: 100vw; 
     z-index: 20;
+    animation: ${SlideUp} 4s ease 1;
+
 `;
 
 const Img = styled.img`
@@ -37,39 +43,49 @@ const QuoteDisplay = styled.div`
 
  const NavJudge = () =>{
     const Location = useLocation().pathname;
-    const Resume = "resume";
 
-    if (Location.indexOf(Resume) !== -1){
-        return <ResumeLinks />
+    if (Location.toLowerCase().indexOf("/resume/") === -1){
+        
+        return  <ServiceLinks />
+        
     }
     else {
-        return <ServiceLinks />
+        return  <ResumeLinks />
+
+        
     }
 };
 
 
 const Contents = () =>{
     const Location = useLocation().pathname;
-    const Service = "service";
-    const Resume = "resume";
 
     console.log(Location);
     
 
-    if (Location.indexOf(Service) !== -1 && useLocation.indexOf(Resume) !== -1 ){
-        return <React.Fragment><Section><QuoteDisplay>Expectional People Learn that doing their best is all they can do. - Wes Fesler</QuoteDisplay>    </Section></React.Fragment>
+    if (Location.toLowerCase().indexOf("/service/") === -1  && Location.toLowerCase().indexOf("/resume/") === -1){
+        return (
+            <React.Fragment>
+            <Section>
+                <QuoteDisplay>Expectional People Learn that doing their best is all they can do. - Wes Fesler</QuoteDisplay>
+            </Section>
+        </React.Fragment>
+                );
     }
+    
     else {
-        return <Section>
-                    <div>
-                        <ul>
-                           <NavJudge />
-                        </ul>
-                    </div>
+        return (
+            <React.Fragment>
+                <Section>
+                    <NavJudge />
                     <LogoPosition>
                         <Link to="/"><Img src={Logo} /></Link>
                     </LogoPosition>
                 </Section>
+            </React.Fragment>
+           
+                
+        );
     }
 
 

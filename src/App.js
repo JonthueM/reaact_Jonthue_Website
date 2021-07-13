@@ -17,6 +17,7 @@ import sStart from './Pages/Services/Start/Start';
 import sContact from './Pages/Services/sContact/Contact';
 import sPortfolio from './Pages/Services/sPortfolio/Portfolio';
 import sHome from './Pages/Services/sHome/Home';
+import  GlobalFonts from './fonts/font';
 
 import { BrowserRouter,Switch,Route } from 'react-router-dom';
 import  Home from './Pages/Home';
@@ -26,6 +27,7 @@ function App() {
   <React.Fragment>
     <BrowserRouter>
       <Layout>
+        <GlobalFonts/>
         <Switch>
           <Route exact path={rootPath} component={Home} />   
           <Route path={resumeAbout} component={resumAbout}/>
@@ -34,13 +36,13 @@ function App() {
           <Route path={resumeApplocker} component={rAppLocker}/>
           <Route path={resumeGitHub} component={rGithub}/>
           <Route path={resumeContact} component={rContact}/>
-          <Route path={resumeHome} component={rHome}/>
           <Route path={serviceAbout} component={sAbout} />
           <Route path={serviceServices} component={sServices} />
           <Route path={serviceApplocker} component={sAppLocker} />
           <Route path={serviceStart} component={sStart} />
           <Route path={serviceContact} component={sContact} />
           <Route path={servicePortfolio} component={sPortfolio} />
+          <Route path={resumeHome} component={rHome}/>
           <Route exact path={serviceHome} component={sHome} />   
         </Switch>
       </Layout>

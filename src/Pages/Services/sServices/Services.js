@@ -4,6 +4,9 @@ import {primaryButton} from '../../../Layouts/shared/styledElements/primaryButto
 import styled from "styled-components";
 import Mobile from "./images/mobile.png";
 import Web from "./images/webDev.png";
+import Image from './images/background.png'
+import {ImageContainer} from "../../../Layouts/page/ImageColumn";
+import ContentColumn from '../../../Layouts/page/ContentColumn';
 
 const Button = styled(primaryButton)`
 margin-top:-10px;
@@ -46,12 +49,9 @@ const Img = styled.img`
     padding:0;
     margin:0;
 `;
-
-function Service(){
-    
-        return(
-            <div>
-        <Layout>
+const ServiceContent = () =>{
+    return(
+        <React.Fragement>
         <ServiceList>
                 <ColumnOne>
                     <Img src={Web} />
@@ -80,8 +80,25 @@ function Service(){
                     <Button>More Info</Button>
                 </ColumnThree>
             </ServiceList2>
-        </Layout>
-        </div>
+        </React.Fragement>
+    )
+}
+
+function Service(){
+    
+        return(
+            <React.Fragement>
+                <Layout 
+                    RightColumn={
+                        <ContentColumn>
+                            <ServiceContent/>
+                        </ContentColumn>
+                    }
+                    LeftColumn={
+                        <ImageContainer Image={Image} />
+                    }
+                />
+             </React.Fragement>
         );
         
     

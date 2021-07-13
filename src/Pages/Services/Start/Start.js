@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from "styled-components";
 import { H2 } from "../../../Layouts/shared/styledElements/H2";
+import {ImageContainer} from "../../../Layouts/page/ImageColumn";
+import ContentColumn from '../../../Layouts/page/ContentColumn';
 import {primaryButton} from '../../../Layouts/shared/styledElements/primaryButton';
 
 
@@ -21,6 +23,8 @@ const Note = styled.p`
     text-align:center;
     margin: 7px 0;   
 `;
+
+
 
 function Start (){
     

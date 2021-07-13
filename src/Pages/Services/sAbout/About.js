@@ -4,6 +4,8 @@ import styled from "styled-components";
 import webIcon from "../../sharedAssets/aboutMeIcons/web.png";
 import mobileIcon from "../../sharedAssets/aboutMeIcons/mobile.png";
 import emailIcon from "../../sharedAssets/aboutMeIcons/email.png";
+import {ImageContainer} from "../../../Layouts/page/ImageColumn";
+import ContentColumn from '../../../Layouts/page/ContentColumn';
 import Image from './images/background.png';
 import {Link} from 'react-router-dom';
 
@@ -34,13 +36,10 @@ const TextBullet = styled(Link)`
     display: inline;
     margin-left:20px;
 `;
-function sAbout() {
-    
-        return (
-            <div>
-                <Layout Image={Image}>
-                
-                <Ptag>Who am I? Hardworking, INFP-T, genuine,
+const AboutContent = ()=>{
+    return(
+        <React.Fragment>
+<Ptag>Who am I? Hardworking, INFP-T, genuine,
                     creative, Scorpio, gamer, spiritual christian
                     and true to my core values.</Ptag>
                     
@@ -58,11 +57,29 @@ function sAbout() {
                             <TextBullet>connect@jonthuemichel.com</TextBullet>
                         </Inline>
                     </ListGroup>
+        </React.Fragment>
+    )
+}
+
+function sAbout() {
+    
+        return (
+            <React.Fragment>
+                <Layout RightColumn={
+                    <ContentColumn>
+                        <AboutContent/>
+                    </ContentColumn>
+                } 
+                LeftColumn={
+                    <ImageContainer Image={Image} />
+                }
+                />
+                
+                
                         
                     
-                </Layout>
         
-            </div>
+            </React.Fragment>
             )
     
 }

@@ -1,10 +1,35 @@
 import React from 'react';
 import styled from 'styled-components';
+import { useLocation } from 'react-router-dom';
 
 
+const FlexBox = styled.div`
+    display: flexbox;
+    margin-top: -8px;
+`;
+const PageName = styled.h1`
+    color:white;
+    font-size: 58px;
+    margin-bottom: -15px;
+`;
+const PageState = styled.p`
+    color: green;
+        text-transform: uppercase;
+        letter-spacing: 6px;
+        font-size: 12px;
+        font-weight: bold;
+        `;
+
+    const TextualProgressPart = styled.div`
+        margin-top: -45px;
+        margin-left: 10px;
+    `;
+
+const VisualProgressPart = styled.div`
+`;
 const TrafficLights = styled.div`
     background-color: #222;
-    background-image: linear-gradient(transparent 2%, #111 2%, transparent 3%,  #111 30% );
+    background-image: linear-gradient(transparent 2%, #111 2%, transparent 75%,  #111 30% );
     width: 30px;
     height: 70px;
     border-radius: 7px;
@@ -54,14 +79,25 @@ const GreenLights = styled.div`
 `;
 
 function StatusIndicator(){
+    const Location = useLocation().pathname;
+    var Filename  = Location.substring(Location.lastIndexOf('/')+1).charAt(0).toUpperCase() + Location.substring(Location.lastIndexOf('/')+1).slice(1);
 
     return (
         <React.Fragment>
-            <TrafficLights>
-                <RedLights></RedLights>
-                <YellowLights></YellowLights>
-                <GreenLights></GreenLights>
-            </TrafficLights>
+            <FlexBox>
+                <VisualProgressPart>
+                    <TrafficLights>
+                        <RedLights></RedLights>
+                        <YellowLights></YellowLights>
+                        <GreenLights></GreenLights>
+                    </TrafficLights>
+                </VisualProgressPart>
+                <TextualProgressPart>
+                    <PageName>{Filename}</PageName>
+                    <PageState>Complete</PageState>
+                </TextualProgressPart>
+            </FlexBox>
+            
         </React.Fragment>
     )
     

@@ -7,37 +7,59 @@ import ResumeIcon from '../../../Pages/sharedAssets/SVG/ResumeIcon.svg';
 
 const Title = styled.div`
     color: white;
-    font-size: 14px;
+    font-size: 26px;
     text-align: center;
+    margin-left: -25px;
+`;
+const HomeTitle = styled(Title)`
+    margin-left:-31px;
+`;
+const ResumeTitle = styled(Title)`
+    margin-top:-10px;
+    margin-left:-63px;
 `;
 const Image = styled.img`
     width: 50px;
     height: 54px;
+`;
+const ServiceImage = styled(Image)`
+    height: 75px;
+    width: auto;
+    margin-bottom: -17px;
+    margin-left:-5px;
+`;
+
+const ResumeImage = styled(Image)`
+    width: 140px;
+    height: auto;
+    margin-top: -47px;
+    margin-bottom: -37px;
+    margin-left:-62px;
 `;
 
 const HomeSection = () =>{
     return(
         <React.Fragment>
             <Image src={HomeIcon} />
-            <Title>Home</Title>
+            <HomeTitle>Home</HomeTitle>
         </React.Fragment>
     )
-};
+}
 
 const ServiceSection = () =>{
     return(
         <React.Fragment>
-            <Image src={ServiceIcon} />
+            <ServiceImage src={ServiceIcon} />
             <Title>Service</Title>
         </React.Fragment>
-    )
+    );
 };
 
-const ResumeSection =() =>{
+const ResumeSection = () =>{
     return(
         <React.Fragment>
-            <Image src={ResumeIcon}/>
-            <Title>Resume</Title>
+            <ResumeImage src={ResumeIcon}/>
+            <ResumeTitle>Resume</ResumeTitle>
         </React.Fragment>
     )
 }
@@ -46,33 +68,33 @@ const NavJudge = () =>{
     const Location = useLocation().pathname;
     const Resume = "resume";
 
-    if (Location.indexOf(Resume) !== -1){
-        return <ResumeSection/>
+    if (Location.indexOf(Resume) === -1){
+        return <ServiceSection/>
         
     }
     else {
-        return  <ServiceSection/>
+
+        return  <ResumeSection/>
+        
     }
-};
+}
 
 
 const Contents = () =>{
     const Location = useLocation().pathname;
-    const Service = "service";
-    const Resume = "resume";
-
-    console.log(Location);
+       console.log("Section Indicator Prints"+ {Location});
     
 
-    if (Location.indexOf(Service) !== -1 && Location.indexOf(Resume) !== -1 ){
+    if (Location.toLowerCase().indexOf("/service/") === -1  && Location.toLowerCase().indexOf("/resume/") === -1){
         return <HomeSection/>
     }
+   
     else {
         return <NavJudge />              
     }
 
 
-};
+}
 
 const SectionIndicator = () =>{
 

@@ -3,16 +3,26 @@ import dial from './R2Assets/dial.svg';
 import home from './R2Assets/home.svg';
 import leftTriangle from './R2Assets/TriangleArrow-Right.svg';
 import rightTriangle from './R2Assets/TriangleArrow-Left.svg';
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import {rootPath} from './../../../routes';
 import {Link} from 'react-router-dom';
+
+const SlideLeft = keyframes`
+ from{left:-100px;} 
+  to{left:0;}
+`;
+
+const SlideRight = keyframes`
+from{right:-100px} 
+  to{right:0;}
+`;
 
 const Vspot = styled.div`
     position: fixed;
     z-index: 2;
     width: 100vw;
     height: 10vw;
-    top: 28%;
+    top: 25%;
 `;
 const Oneline = styled.div`
     display: flex;
@@ -32,11 +42,13 @@ const LeftNav = styled.div`
     width: 231px;   
     position: absolute;
     top: 65%; 
+    animation: ${SlideLeft} 4s ease 1;
 `;
 const RightNav = styled.div`
     position: absolute;
-    top: 59%;
+    top: 68%;
     right: 0;
+    animation: ${SlideRight} 4s ease 1;
 `;
 const Triangle = styled.img`
     width: 130px;
