@@ -4,7 +4,7 @@ import {primaryButton} from '../../../Layouts/shared/styledElements/primaryButto
 import styled from "styled-components";
 import Mobile from "./images/mobile.png";
 import Web from "./images/webDev.png";
-import Image from './images/background.png'
+import BackgroundImage from './images/background.png'
 import {ImageContainer} from "../../../Layouts/page/ImageColumn";
 import ContentColumn from '../../../Layouts/page/ContentColumn';
 
@@ -95,7 +95,7 @@ function Service(){
                         </ContentColumn>
                     }
                     LeftColumn={
-                        <ImageContainer Image={Image} />
+                        <ImageContainer Image={BackgroundImage} />
                     }
                 />
              </React.Fragement>
