@@ -1,10 +1,7 @@
 import React from 'react';
 import styled from "styled-components";
-import Layout from '../../../Layouts/page/pageLayout';
 import Image  from './images/background.png';
-import { H2 } from "../../../Layouts/shared/styledElements/H2";
-import {ImageContainer} from "../../../Layouts/page/ImageColumn";
-import ContentColumn from '../../../Layouts/page/ContentColumn';
+import {ImageColumn,ContentColumn, PageLayout, H2} from "../../../directory";
 
 
 const Button = styled.button`
@@ -50,14 +47,14 @@ function sStart (){
     
         return(
             <React.Fragment>
-                <Layout 
+                <PageLayout 
                     RightColumn = {
                         <ContentColumn>
                             <StartContent/>
                         </ContentColumn>
                     }
                     LeftColumn = {
-                        <ImageContainer Image={Image}/>
+                        <ImageColumn Image={Image}/>
                     }
                 />
             </React.Fragment>

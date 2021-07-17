@@ -1,8 +1,6 @@
 import React from 'react';
-import Layout from '../../../Layouts/page/pageLayout';
 import BackgroundImage from './images/background.png';
-import {ImageContainer} from "../../../Layouts/page/ImageColumn";
-import ContentColumn from '../../../Layouts/page/ContentColumn';
+import {ImageColumn, ContentColumn, PageLayout} from "../../../directory";
 
 const  ProjectsContent = ()=>{
     return(
@@ -17,18 +15,18 @@ const  ProjectsContent = ()=>{
 function rProjects() {
     return (
         <React.Fragment>
-            <Layout 
+            <PageLayout 
                 RightColumn ={
                     <ContentColumn>
                         <ProjectsContent />
                     </ContentColumn>
                 }
                 LeftColumn={
-                    <ImageContainer Image={BackgroundImage} />
+                    <ImageColumn Image={BackgroundImage} />
                 }
             />
         </React.Fragment>            
     )
 }
 
-export {rProjects}
+export {rProjects};

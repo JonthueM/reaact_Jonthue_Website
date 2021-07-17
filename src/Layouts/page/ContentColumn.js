@@ -37,4 +37,4 @@ const ContentColumn = (props)=>{
         </React.Fragment>
     )
 }
-export default ContentColumn;
+export {ContentColumn};

@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import ResumeIcon from '../../sharedAssets/SVG/ResumeIcon.svg';
+import ResumeIcon from "../../sharedAssets/SVG/ResumeIcon.svg";
 
 const SVG = styled.img`
     position: absolute;
@@ -8,7 +8,6 @@ const SVG = styled.img`
     left:43%;
     height: 460px;
     width: 422px;
-       
 `;
 const Title = styled.p`
     font-size: 122px;

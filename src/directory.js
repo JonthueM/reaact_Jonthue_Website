@@ -15,5 +15,9 @@ export { sPortfolio } from './Pages/Services/sPortfolio/Portfolio';
 export { sContact } from './Pages/Services/sContact/Contact';
 export { sStart } from './Pages/Services/Start/Start';
 
+//Layouts
+export {PageLayout} from './Layouts/page/pageLayout';
+export {ImageColumn} from './Layouts/page/ImageColumn';
+export {ContentColumn} from './Layouts/page/ContentColumn';
 
-
+//Note this does not work well with style components and assets.

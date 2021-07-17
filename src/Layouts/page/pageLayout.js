@@ -37,7 +37,7 @@ const RightColumn = styled(ColumnContainer)`
 `;
 
 
-const MainContentlayout = (props) =>{
+const PageLayout = (props) =>{
    
 
     return(
@@ -64,4 +64,4 @@ const MainContentlayout = (props) =>{
     </React.Fragment>
 );
 }
-export default MainContentlayout;
+export {PageLayout};

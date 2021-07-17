@@ -1,9 +1,7 @@
 import React from 'react';
 import styled from "styled-components";
+import {ImageColumn, ContentColumn, PageLayout} from "../../../directory";
 import { H2 } from "../../../Layouts/shared/styledElements/H2";
-import Layout from '../../../Layouts/page/pageLayout';
-import {ImageContainer} from "../../../Layouts/page/ImageColumn";
-import ContentColumn from '../../../Layouts/page/ContentColumn';
 import Image from './images/background.png';
 
 const Button = styled.button`
@@ -32,14 +30,14 @@ function sAppLocker(){
     
         return(
             <React.Fragment>
-            <Layout
+            <PageLayout
                 RightColum={
                     <ContentColumn>
                         <AppLockerContent/>
                     </ContentColumn>
                 }
                 LeftColumn={
-                    <ImageContainer Image={Image} />
+                    <ImageColumn Image={Image} />
                 }
             />
                

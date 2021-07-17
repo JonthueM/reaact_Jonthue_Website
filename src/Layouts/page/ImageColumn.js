@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const ImageContainer = styled.div`
+const ImageColumn = styled.div`
     flex:1;
     height: 100vh;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -12,4 +12,4 @@ const ImageContainer = styled.div`
     background-size:cover;
 `;
 
-export {ImageContainer};
+export {ImageColumn};

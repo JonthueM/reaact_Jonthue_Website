@@ -1,9 +1,7 @@
 import React from 'react';
-import Layout from '../../../Layouts/page/pageLayout';
 import styled from 'styled-components';
 import BackgroundImage from './images/background.png';
-import ContentColumn from '../../../Layouts/page/ContentColumn';
-import { ImageContainer } from '../../../Layouts/page/ImageColumn';
+import {ImageColumn, ContentColumn, PageLayout} from "../../../directory";
 
 
 const LeftSideButton = styled.button`
@@ -25,14 +23,14 @@ const ContactContent = () =>{
 function rContact  (){
     return(
            <React.Fragment>
-               <Layout 
+               <PageLayout 
                RightColumn={
                    <ContentColumn>
                        <ContactContent/>
                    </ContentColumn>
                }
                LeftColumn={
-                   <ImageContainer Image={BackgroundImage} />
+                   <ImageColumn Image={BackgroundImage} />
                }
                />
            </React.Fragment>

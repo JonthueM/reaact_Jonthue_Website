@@ -1,11 +1,9 @@
 import React from 'react';
-import Layout from '../../../Layouts/page/pageLayout';
+import {ImageColumn, ContentColumn, PageLayout} from "../../../directory";
 import styled from "styled-components";
-import Mobile from "./images/mobile.png";
-import Web from "./images/webDev.png";
+import mobileIcon from '../../sharedAssets/aboutMeIcons/mobile.png';
+import webIcon from '../../sharedAssets/aboutMeIcons/web.png';
 import BackgroundImage from './images/background.png'
-import {ImageContainer} from "../../../Layouts/page/ImageColumn";
-import ContentColumn from '../../../Layouts/page/ContentColumn';
 
 const Button = styled.button`
 margin-top:-10px;
@@ -53,7 +51,7 @@ const ServiceContent = () =>{
         <React.Fragement>
         <ServiceList>
                 <ColumnOne>
-                    <Img src={Web} />
+                    <Img src={webIcon} />
                 </ColumnOne>
                 <ColumnTwo>
                     <span>
@@ -67,7 +65,7 @@ const ServiceContent = () =>{
             </ServiceList>
             <ServiceList2>
                 <ColumnOne>
-                    <Img src={Mobile} />
+                    <Img src={mobileIcon} />
                 </ColumnOne>
                 <ColumnTwo>
                     <span>
@@ -87,14 +85,14 @@ function sService(){
     
         return(
             <React.Fragement>
-                <Layout 
+                <PageLayout 
                     RightColumn={
                         <ContentColumn>
                             <ServiceContent/>
                         </ContentColumn>
                     }
                     LeftColumn={
-                        <ImageContainer Image={BackgroundImage} />
+                        <ImageColumn Image={BackgroundImage} />
                     }
                 />
              </React.Fragement>

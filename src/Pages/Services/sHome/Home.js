@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from "styled-components";
-import ServiceIcon from '../../sharedAssets/SVG/ServicesIcon.svg';
+import ServiceIcon from "../../sharedAssets/SVG/ServicesIcon.svg";
 
 const SVGservices = styled.img`
     position: absolute;

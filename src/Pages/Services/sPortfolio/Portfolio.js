@@ -1,14 +1,12 @@
 import React from 'react';
-import Layout from '../../../Layouts/page/pageLayout';
+import {ImageColumn, ContentColumn, PageLayout} from "../../../directory";
 import Image from './images/background.png';
-import {ImageContainer} from "../../../Layouts/page/ImageColumn";
-import ContentColumn from '../../../Layouts/page/ContentColumn';
 
 
 const PortfolioContent = ()=>{
     return(
         <React.Fragment>
-                           Coming Soon
+                Coming Soon
 
         </React.Fragment>
     );
@@ -18,14 +16,14 @@ function sPortfolio() {
     
         return (
             <div>
-                <Layout
+                <PageLayout
                  RightColumn={
                      <ContentColumn>
                          <PortfolioContent />
                      </ContentColumn>
                  }
                  LeftColumn={
-                     <ImageContainer Image={Image} />
+                     <ImageColumn Image={Image} />
                  }
                 />
         

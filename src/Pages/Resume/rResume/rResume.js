@@ -1,9 +1,8 @@
 import React from 'react';
-import Layout from '../../../Layouts/page/pageLayout';
 import styled from "styled-components";
 import BackgroundImage from './images/background.png';
-import ContentColumn from '../../../Layouts/page/ContentColumn';
-import { ImageContainer } from '../../../Layouts/page/ImageColumn';
+import {ImageColumn, ContentColumn, PageLayout} from "../../../directory";
+
 
 const Center = styled.div`
     display: flex;
@@ -106,14 +105,14 @@ function rResume(){
     
 		return(
 			<React.Fragment>
-					<Layout 
+					<PageLayout 
 					RightColumn={
 						<ContentColumn>
 							<ResumeContent/>
 						</ContentColumn>
 					}
 					LeftColumn={
-						<ImageContainer Image={BackgroundImage} />
+						<ImageColumn Image={BackgroundImage} />
 					}
 					 />
         	</React.Fragment>

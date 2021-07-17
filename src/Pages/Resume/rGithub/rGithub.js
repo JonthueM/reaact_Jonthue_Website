@@ -1,10 +1,8 @@
 import React from 'react';
 import styled from "styled-components";
-import Layout from '../../../Layouts/page/pageLayout';
-import { H2 } from "../../../Layouts/shared/styledElements/H2";
-import {ImageContainer} from "../../../Layouts/page/ImageColumn";
-import ContentColumn from '../../../Layouts/page/ContentColumn';
 import BackgroundImage from './images/github.png';
+import {ImageColumn, ContentColumn, PageLayout, H2} from "../../../directory";
+
 
 const Button = styled.button`
 margin-left: 140px;
@@ -32,14 +30,14 @@ margin-left: 140px;
 function rGithub(){
     return(
             <React.Fragment>
-                <Layout 
+                <PageLayout 
                     RightColumn = {
                         <ContentColumn>
                             <GitHubContent/>
                         </ContentColumn>
                     }
                     LeftColumn ={
-                        <ImageContainer Image={BackgroundImage} />
+                        <ImageColumn Image={BackgroundImage} />
                     }
                 />
         </React.Fragment>

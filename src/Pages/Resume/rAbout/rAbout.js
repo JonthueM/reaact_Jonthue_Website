@@ -1,13 +1,10 @@
 import React from 'react';
-import Layout from '../../../Layouts/page/pageLayout';
 import styled from "styled-components";
-import {ImageContainer} from "../../../Layouts/page/ImageColumn";
-import ContentColumn from '../../../Layouts/page/ContentColumn';
-import webIcon from "../../sharedAssets/aboutMeIcons/web.png";
-import githubIcon from "../../sharedAssets/aboutMeIcons/web.png";
-import linkedInIcon from "../../sharedAssets/aboutMeIcons/linkedin-48.png";
-import mobileIcon from "../../sharedAssets/aboutMeIcons/mobile.png";
-import emailIcon from "../../sharedAssets/aboutMeIcons/email.png";
+import {ImageColumn, ContentColumn, PageLayout} from "../../../directory";
+import emailIcon  from '../../sharedAssets/aboutMeIcons/email.png';
+import mobileIcon from '../../sharedAssets/aboutMeIcons/mobile.png';
+import webIcon from '../../sharedAssets/aboutMeIcons/web.png';
+import githubIcon from '../../sharedAssets/aboutMeIcons/web.png';
 import BackgroundImage from "./images/background.png";
 
 const Ptag = styled.p`
@@ -54,7 +51,7 @@ const AboutContent = () =>{
                             <TextBullet>https://github.com/JonthueM</TextBullet>
                         </Inline>
                         <Inline  href="/">
-                            <ImgBullet src={linkedInIcon} />
+                            <ImgBullet src={githubIcon} />
                             <TextBullet>www.linkedin.com/in/jonthue-michel</TextBullet>
                         </Inline>
                         <Inline  href="/">
@@ -75,14 +72,14 @@ function rAbout() {
          
     return (
             <React.Fragment>
-                <Layout 
+                <PageLayout 
                 RightColumn={
                     <ContentColumn>
                         <AboutContent/>
                     </ContentColumn>
                 } 
                 LeftColumn={
-                    <ImageContainer Image={BackgroundImage}/>
+                    <ImageColumn Image={BackgroundImage}/>
                 } />
         
             </React.Fragment>

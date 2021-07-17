@@ -1,7 +1,5 @@
 import React from 'react';
-import Layout from '../../../Layouts/page/pageLayout';
-import {ImageContainer} from "../../../Layouts/page/ImageColumn";
-import ContentColumn from '../../../Layouts/page/ContentColumn';
+import {ImageColumn, ContentColumn, PageLayout} from "../../../directory";
 import styled from 'styled-components';
 import Image from './images/background.png';
 
@@ -27,14 +25,14 @@ function sContact (){
     
         return(
             <React.Fragment>
-                <Layout 
+                <PageLayout 
                     RightColumn={
                         <ContentColumn>
                             <ContactContent/>
                         </ContentColumn>
                     }
                     LeftColumn={
-                        <ImageContainer Image={Image}/>
+                        <ImageColumn Image={Image}/>
                     }
                 />
         </React.Fragment>
