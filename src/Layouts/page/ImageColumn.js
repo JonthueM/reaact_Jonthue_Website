@@ -1,4 +1,3 @@
-import React from 'react';
 import styled from 'styled-components';
 
 const ImageContainer = styled.div`
@@ -9,8 +8,8 @@ const ImageContainer = styled.div`
     overflow: hidden;
     background-image: url(${props => props.Image});
     background-repeat: no-repeat;
-    background-position:bottom center;
-    background-size:148%;
+    background-position:center center;
+    background-size:cover;
 `;
 
 export {ImageContainer};

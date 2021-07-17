@@ -90,4 +90,4 @@ function rAbout() {
     
 };
 
-export default rAbout;
+export {rAbout};

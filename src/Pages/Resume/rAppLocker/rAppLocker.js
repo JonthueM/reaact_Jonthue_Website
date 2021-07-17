@@ -2,12 +2,11 @@ import React from 'react';
 import styled from "styled-components";
 import Layout from '../../../Layouts/page/pageLayout';
 import { H2 } from "../../../Layouts/shared/styledElements/H2";
-import {primaryButton} from '../../../Layouts/shared/styledElements/primaryButton';
 import {ImageContainer} from "../../../Layouts/page/ImageColumn";
 import ContentColumn from '../../../Layouts/page/ContentColumn';
 import BackgroundImage from './images/background.png';
 
-const Button = styled(primaryButton)`
+const Button = styled.button`
         margin-left: 140px;
 `;
 
@@ -34,7 +33,7 @@ const AppLockerContent = () =>{
     )
 }
 
-function rApplockerLocker(){
+function rAppLocker(){
     
         
  return (
@@ -53,4 +52,4 @@ function rApplockerLocker(){
         
     );   
 }
-export default rApplockerLocker;
+export {rAppLocker};

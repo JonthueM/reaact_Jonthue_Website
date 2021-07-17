@@ -14,7 +14,7 @@ const PortfolioContent = ()=>{
     );
 }
 
-function Portfolio() {
+function sPortfolio() {
     
         return (
             <div>
@@ -33,4 +33,4 @@ function Portfolio() {
             )
     
 }
-export default Portfolio;
+export  {sPortfolio};

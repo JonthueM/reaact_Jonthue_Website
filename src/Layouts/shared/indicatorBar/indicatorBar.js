@@ -18,6 +18,8 @@ const IndicatorPosition = styled.div`
 const IndicatorContainer = styled.div`
     display: flex;
     justify-content: space-between;
+    animation: ${Top} 4s ease 1;
+
 
 `;
 const PositionLeft = styled.div`

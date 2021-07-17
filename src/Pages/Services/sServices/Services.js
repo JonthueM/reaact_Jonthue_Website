@@ -1,6 +1,5 @@
 import React from 'react';
 import Layout from '../../../Layouts/page/pageLayout';
-import {primaryButton} from '../../../Layouts/shared/styledElements/primaryButton';
 import styled from "styled-components";
 import Mobile from "./images/mobile.png";
 import Web from "./images/webDev.png";
@@ -8,7 +7,7 @@ import BackgroundImage from './images/background.png'
 import {ImageContainer} from "../../../Layouts/page/ImageColumn";
 import ContentColumn from '../../../Layouts/page/ContentColumn';
 
-const Button = styled(primaryButton)`
+const Button = styled.button`
 margin-top:-10px;
 `;
 
@@ -84,7 +83,7 @@ const ServiceContent = () =>{
     )
 }
 
-function Service(){
+function sService(){
     
         return(
             <React.Fragement>
@@ -103,4 +102,4 @@ function Service(){
         
     
 }
-export default Service;
+export  {sService};

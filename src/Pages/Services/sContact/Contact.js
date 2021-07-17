@@ -1,34 +1,24 @@
 import React from 'react';
-import {InputType} from '../../../Layouts/shared/styledElements/input';
 import Layout from '../../../Layouts/page/pageLayout';
 import {ImageContainer} from "../../../Layouts/page/ImageColumn";
 import ContentColumn from '../../../Layouts/page/ContentColumn';
-import {TextArea} from '../../../Layouts/shared/styledElements/textArea';
-import {primaryButton} from '../../../Layouts/shared/styledElements/primaryButton';
 import styled from 'styled-components';
 import Image from './images/background.png';
 
-const Name = styled(InputType).attrs(props =>({
-    type: "text",
-    placeholder: "Name"
-}));
 
-const Email = styled(InputType).attrs({
-    type: "email",
-    placeholder: "Email"
-});
-
-const LeftSideButton = styled(primaryButton)`
-    margin-left: 12%;
+const LeftSideButton = styled.button`
+      position: absolute;
+    right: 26.3%;
+    color:black;
 `;
 
 const ContactContent = ()=>{
 return(
     <React.Fragment>
-                <Name />
-                <Email />
-                <TextArea />
-                <LeftSideButton src="/"/>
+                <input type="text" placeholder="Name" />
+                <input type="email" placeholder="Email" />
+                <textarea cols="7" rows="4"></textarea>
+                <LeftSideButton src="/">Contact</LeftSideButton>
     </React.Fragment>
 )
 };
@@ -51,4 +41,4 @@ function sContact (){
         );
     
 }
-export default sContact;
+export {sContact};

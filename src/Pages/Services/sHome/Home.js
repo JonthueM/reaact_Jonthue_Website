@@ -35,4 +35,4 @@ function sHome (){
         
      
 }
- export default sHome;
+ export {sHome};

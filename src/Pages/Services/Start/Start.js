@@ -1,12 +1,13 @@
 import React from 'react';
 import styled from "styled-components";
+import Layout from '../../../Layouts/page/pageLayout';
+import Image  from './images/background.png';
 import { H2 } from "../../../Layouts/shared/styledElements/H2";
 import {ImageContainer} from "../../../Layouts/page/ImageColumn";
 import ContentColumn from '../../../Layouts/page/ContentColumn';
-import {primaryButton} from '../../../Layouts/shared/styledElements/primaryButton';
 
 
-const Button = styled(primaryButton)`
+const Button = styled.button`
 margin-left: 140px;
 `;
 
@@ -24,12 +25,9 @@ const Note = styled.p`
     margin: 7px 0;   
 `;
 
-
-
-function Start (){
-    
-        return(
-            <div>
+const StartContent = () =>{
+    return(
+        <React.Fragment>
             <p>Before we start be sure you got some basic things in place <br/>
             so I can develop according to those clear specifcations. To <br/>
             name some</p>
@@ -43,10 +41,30 @@ function Start (){
             <Button>Lets Go!</Button>
 
             <Note>Note: This a desin brief which will take some time to fill out!</Note>
-        </div>
+        </React.Fragment>
         );
+}
+
+
+function sStart (){
+    
+        return(
+            <React.Fragment>
+                <Layout 
+                    RightColumn = {
+                        <ContentColumn>
+                            <StartContent/>
+                        </ContentColumn>
+                    }
+                    LeftColumn = {
+                        <ImageContainer Image={Image}/>
+                    }
+                />
+            </React.Fragment>
+
+            );
         
     
 }
 
-export default Start;
+export  {sStart};

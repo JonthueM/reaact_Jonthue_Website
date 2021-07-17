@@ -83,4 +83,4 @@ function sAbout() {
             )
     
 }
-export default sAbout;
+export  {sAbout};

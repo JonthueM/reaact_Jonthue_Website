@@ -1,34 +1,24 @@
 import React from 'react';
-import {InputType} from '../../../Layouts/shared/styledElements/input';
 import Layout from '../../../Layouts/page/pageLayout';
-import {TextArea} from '../../../Layouts/shared/styledElements/textArea';
-import {primaryButton} from '../../../Layouts/shared/styledElements/primaryButton';
 import styled from 'styled-components';
 import BackgroundImage from './images/background.png';
 import ContentColumn from '../../../Layouts/page/ContentColumn';
 import { ImageContainer } from '../../../Layouts/page/ImageColumn';
 
-const Name = styled(InputType).attrs(props =>({
-    type: "text",
-    placeholder: "Name"
-}));
 
-const Email = styled(InputType).attrs({
-    type: "email",
-    placeholder: "Email"
-});
-
-const LeftSideButton = styled(primaryButton)`
-    margin-left: 12%;
+const LeftSideButton = styled.button`
+    position: absolute;
+    right: 26.3%;
+    color:black;
 `;
 
-const ContactContent = ()=>{
+const ContactContent = () =>{
     return(
         <React.Fragment>
-                <Name />
-                <Email />
-                <TextArea />
-                <LeftSideButton src="/"/>
+                <input type="text" placeholder="Name" />
+                <input type="email" placeholder="Email" />
+                <textarea placeholder="Your Message" cols="7" rows="7"></textarea>
+                <LeftSideButton src="/">Button</LeftSideButton>
         </React.Fragment>
     );
 }
@@ -50,4 +40,4 @@ function rContact  (){
        
     
 }
-export default rContact;
+export  {rContact};

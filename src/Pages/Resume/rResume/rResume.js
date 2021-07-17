@@ -121,4 +121,4 @@ function rResume(){
         
     
 }
-export default rResume;
+export  {rResume};

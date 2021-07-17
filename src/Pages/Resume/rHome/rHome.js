@@ -21,8 +21,8 @@ const Title = styled.p`
     right: 40%;
 `;
 
-class rHome extends React.Component {
-    render() {
+function rHome () {
+    
         return(
             <React.Fragment>
                     <SVG src={ResumeIcon}/>
@@ -30,6 +30,6 @@ class rHome extends React.Component {
             </React.Fragment>
         );
         
-    }
+    
  }
- export default rHome;
+ export {rHome};

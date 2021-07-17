@@ -4,10 +4,9 @@ import { H2 } from "../../../Layouts/shared/styledElements/H2";
 import Layout from '../../../Layouts/page/pageLayout';
 import {ImageContainer} from "../../../Layouts/page/ImageColumn";
 import ContentColumn from '../../../Layouts/page/ContentColumn';
-import {primaryButton} from '../../../Layouts/shared/styledElements/primaryButton';
 import Image from './images/background.png';
 
-const Button = styled(primaryButton)`
+const Button = styled.button`
 margin-left: 140px;
 `;
 
@@ -51,4 +50,4 @@ function sAppLocker(){
         
     
 }
-export default sAppLocker;
+export  {sAppLocker};

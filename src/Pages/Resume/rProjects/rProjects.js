@@ -1,5 +1,4 @@
 import React from 'react';
-import styled from 'styled-components';
 import Layout from '../../../Layouts/page/pageLayout';
 import BackgroundImage from './images/background.png';
 import {ImageContainer} from "../../../Layouts/page/ImageColumn";
@@ -15,7 +14,7 @@ const  ProjectsContent = ()=>{
 
 
 
-function componentName() {
+function rProjects() {
     return (
         <React.Fragment>
             <Layout 
@@ -32,4 +31,4 @@ function componentName() {
     )
 }
 
-export default componentName
+export {rProjects}

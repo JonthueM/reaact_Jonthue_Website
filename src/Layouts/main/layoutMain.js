@@ -4,7 +4,7 @@ import IndicatorBar from '../shared/indicatorBar/indicatorBar';
 import SectionNav from '../shared/SectionNav/SectionNav';
 import R2 from '../shared/R2/R2';
 
-const layout = (props) =>{
+const Layout = (props) =>{
     return(
             <div>
                 <VideoBackground>
@@ -16,4 +16,4 @@ const layout = (props) =>{
             </div>
             );
 }
-export default layout;
+export  {Layout};
