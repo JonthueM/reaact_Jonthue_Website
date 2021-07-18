@@ -1,7 +1,9 @@
 import React from 'react';
 import styled from "styled-components";
 import BackgroundImage from './images/github.png';
-import {ImageColumn, ContentColumn, PageLayout, H2} from "../../../directory";
+import {ImageColumn, ContentColumn, PageLayout} from "../../../directory";
+import {H2} from '../../../Layouts/shared/styledElements/H2';
+
 
 
 const Button = styled.button`

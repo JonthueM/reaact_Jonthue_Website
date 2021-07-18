@@ -6,6 +6,8 @@ import rightTriangle from './R2Assets/TriangleArrow-Left.svg';
 import styled, { keyframes } from "styled-components";
 import {rootPath} from './../../../routes';
 import {Link} from 'react-router-dom';
+import Modal from './Modal';
+import useModal from './useModal';
 
 const SlideLeft = keyframes`
  from{left:-100px;} 
@@ -85,6 +87,7 @@ const RightImage = styled(Image)`
 `;
 
 function R2(){
+    const {isShowing, toggle} = useModal();
     return(
         <Vspot>
             <Oneline>
@@ -103,7 +106,7 @@ function R2(){
                         <RightNav>
                             <Triangle src={rightTriangle} />
                             <SVGcontainter>
-                                <Link to="/">
+                                <Link onClick={toggle}>
                                     <RightImage src={dial}  />
                                 </Link>
                             </SVGcontainter>
@@ -111,6 +114,7 @@ function R2(){
                     </FlexIT>
                 </FlexIT>
             </Oneline>
+            <Modal isShowing={isShowing} hide={toggle} />
         </Vspot>
     );
 }
